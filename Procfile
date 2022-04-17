@@ -1,1 +1,1 @@
-worker: /bin/python3 /home/aryaman/projects/hotGirlsWebScraper/bot.py
+worker: python3 bot.py
