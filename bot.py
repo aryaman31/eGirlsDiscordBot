@@ -16,6 +16,9 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    if message.author == client.user:
+        return
+
     if message.content.startswith("$horny"):
         await message.channel.send("not yet BOZO")
 
