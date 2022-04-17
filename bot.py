@@ -20,6 +20,6 @@ async def on_message(message):
         return
 
     if message.content.startswith("$horny"):
-        await message.channel.send("not yet BOZO")
+        await message.channel.send("https://twitter.com/SpyFamilyManga/status/1515478079547875329")
 
 client.run(TOKEN)
