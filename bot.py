@@ -19,7 +19,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith("$horny"):
+    if message.content.startswith("$maidens"):
         await message.channel.send("https://twitter.com/floaromaa/status/1515820312369438722")
 
 client.run(TOKEN)
