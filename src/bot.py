@@ -1,9 +1,14 @@
 # bot.py
 from email import message
 import os
-
 import discord
+from random import choice
 from dotenv import load_dotenv
+
+
+def getRandomImage():
+    with open('src/imagelinks.txt', 'r') as f:
+        return choice(f.readlines()).strip().split(",")
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -20,6 +25,7 @@ async def on_message(message):
         return
 
     if message.content.startswith("$maidens"):
-        await message.channel.send("https://twitter.com/floaromaa/status/1515820312369438722")
+        link, image = getRandomImage()
+        await message.channel.send(f'<https://www.reddit.com{link}>\n{image}')
 
 client.run(TOKEN)
